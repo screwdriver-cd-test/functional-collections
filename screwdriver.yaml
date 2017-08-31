@@ -1,6 +1,12 @@
+workflow:
+    - publish
+shared:
+    image: node:6
 jobs:
     main:
-        image: node:6
         steps:
             - install: npm install
             - test: npm test
+    publish:
+        steps:
+            - print: echo Starting publish job!
